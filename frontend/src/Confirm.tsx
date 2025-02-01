@@ -1,8 +1,17 @@
-import { useState } from "react";
 import { Dessert } from "./lib/types";
+import { useCartContext } from "./hooks/useCartContext";
 
-export function Confirm() {
-  const [cart, setCart] = useState<Dessert[]>([]);
+export function Confirm({
+  setIsShown,
+}: {
+  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
+  const { cart, setCart } = useCartContext();
+
+  const handleReset = () => {
+    setCart([]);
+    setIsShown(false);
+  };
 
   return (
     <div className="confirmContainer">
@@ -26,20 +35,19 @@ export function Confirm() {
               <h3>${(order.price * order.quantity).toFixed(2)}</h3>
             </article>
           ))}
-          <div className="totalContainer">
-            <h3>Order Total</h3>
-            <h1>
-              $
-              {cart
-                .reduce(
-                  (total, order) => total + order.price * order.quantity,
-                  0
-                )
-                .toFixed(2)}
-            </h1>
-          </div>
         </section>
-        <button className="bigButton">Start New Order</button>
+        <div className="totalContainer">
+          <h3>Order Total</h3>
+          <h1>
+            $
+            {cart
+              .reduce((total, order) => total + order.price * order.quantity, 0)
+              .toFixed(2)}
+          </h1>
+        </div>
+        <button className="bigButton" onClick={handleReset}>
+          Start New Order
+        </button>
       </main>
     </div>
   );

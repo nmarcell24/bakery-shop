@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Order } from "./components/Order";
 import { Confirm } from "./Confirm";
-import { Dessert } from "./lib/types";
+import { useCartContext } from "./hooks/useCartContext";
 
 export function Cart() {
-  const [cart, setCart] = useState<Dessert[]>([]);
+  const { cart } = useCartContext();
   const [isShown, setIsShown] = useState(false);
 
   return (
@@ -50,7 +50,7 @@ export function Cart() {
           </button>
         </>
       )}
-      {isShown && <Confirm />}
+      {isShown && <Confirm setIsShown={setIsShown} />}
     </div>
   );
 }

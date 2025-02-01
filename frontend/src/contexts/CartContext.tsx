@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { Dessert } from "../lib/types";
 
-const CartContext = createContext<{
+export const CartContext = createContext<{
   cart: Dessert[];
   setCart: React.Dispatch<React.SetStateAction<Dessert[]>>;
 }>({ cart: [], setCart: () => {} });

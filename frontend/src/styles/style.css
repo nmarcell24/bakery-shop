@@ -57,7 +57,8 @@ html {
   border-radius: 1.5rem;
   margin-bottom: 2.5rem;
 }
-.menuContainer .cardContainer .card button, .menuContainer .cardContainer .card .activeButton {
+.menuContainer .cardContainer .card button,
+.menuContainer .cardContainer .card .activeButton {
   background-color: white;
   padding: 0.8rem 1.5rem;
   box-shadow: 0px 0px 10px 0px rgba(124, 124, 124, 0.9);
@@ -76,12 +77,14 @@ html {
   justify-content: center;
   gap: 0.5rem;
 }
-.menuContainer .cardContainer .card button:hover, .menuContainer .cardContainer .card .activeButton:hover {
+.menuContainer .cardContainer .card button:hover,
+.menuContainer .cardContainer .card .activeButton:hover {
   cursor: pointer;
   outline: 2px solid hsl(14, 86%, 42%);
   color: hsl(14, 86%, 42%);
 }
-.menuContainer .cardContainer .card button span, .menuContainer .cardContainer .card .activeButton span {
+.menuContainer .cardContainer .card button span,
+.menuContainer .cardContainer .card .activeButton span {
   color: hsl(14, 86%, 42%);
 }
 .menuContainer .cardContainer .card .activeButton {
@@ -106,6 +109,32 @@ html {
 }
 .menuContainer .cardContainer .card h3:last-child {
   color: hsl(14, 86%, 42%);
+}
+.menuContainer .cardContainer .card .quantityContainer {
+  background-color: hsl(14, 86%, 42%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(124, 124, 124, 0.9);
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  bottom: 29%;
+  transform: translateX(-50%);
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.menuContainer .cardContainer .card .quantityContainer span {
+  cursor: pointer;
+}
+.menuContainer .cardContainer .card .quantityContainer span:hover {
+  outline: 2px solid white;
+  border-radius: 50%;
 }
 
 .cartContainer {
@@ -147,7 +176,8 @@ html {
 .cartContainer hr {
   border-color: rgba(124, 124, 124, 0.2);
 }
-.cartContainer h1, .cartContainer .quanity {
+.cartContainer h1,
+.cartContainer .quanity {
   color: hsl(14, 86%, 42%);
 }
 .cartContainer span {
@@ -217,10 +247,14 @@ html {
   font-weight: 500;
 }
 .confirmContainer main section {
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0 0 0;
   background-color: hsl(20, 50%, 98%);
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   display: block;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  max-height: 24rem;
 }
 .confirmContainer main section article {
   display: flex;
@@ -246,6 +280,7 @@ html {
 .confirmContainer main section article div .flexBox p:first-child {
   color: hsl(14, 86%, 42%);
 }
-.confirmContainer main section .totalContainer {
-  padding-bottom: 0;
+.confirmContainer main .totalContainer {
+  background-color: hsl(20, 50%, 98%);
+  padding: 0 1rem;
 }/*# sourceMappingURL=style.css.map */
