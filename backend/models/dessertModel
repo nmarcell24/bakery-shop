@@ -1,0 +1,11 @@
+const mongoose = require("mongoose");
+
+const dessertSchema = new mongoose.Schema({
+    name: String,
+    category: String,
+    price: Number,
+    image: Object,
+    quantity: Number
+});
+
+module.exports = mongoose.model("Dessert", dessertSchema);

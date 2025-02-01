@@ -1,0 +1,44 @@
+const Dessert = require("../models/dessertModel");
+
+const getAllDesserts = async (req, res) => {
+  const desserts = await Dessert.find({}).sort({ createdAt: -1 });
+  res.status(200).json(desserts);
+};
+
+const incrementDessert = async (req, res) => {
+    const { id } = req.params;
+  
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(404).json({ error: "No such dessert" });
+    }
+  
+    const updatedDessert = await Note.findOneAndUpdate({ _id: id }, { quantity : quantity - 1 });
+  
+    if (!updatedDessert) {
+      return res.status(400).json({ error: "Cannot update dessert" });
+    }
+  
+    res.status(200).json(updatedDessert);
+  };
+
+const decrementDessert = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "No such dessert" });
+  }
+
+  const updatedDessert = await Note.findOneAndUpdate({ _id: id }, { quantity : quantity + 1 });
+
+  if (!updatedDessert) {
+    return res.status(400).json({ error: "Cannot update dessert" });
+  }
+
+  res.status(200).json(updatedDessert);
+};
+
+module.exports = {
+  getAllDesserts,
+  incrementDessert,
+  decrementDessert,
+};

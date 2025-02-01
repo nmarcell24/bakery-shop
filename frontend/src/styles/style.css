@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bigButton {
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  padding: 1rem 3rem;
+  width: 100%;
+  margin-top: 2rem;
+  color: hsl(20, 50%, 98%);
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 2rem;
+}
+.bigButton:hover {
+  cursor: pointer;
+  background-color: #982c0b;
+  color: #e6e6e6;
+}
+
+html {
+  background-color: hsl(20, 50%, 98%);
+}
+
+.appContainer {
+  display: flex;
+  gap: 2rem;
+  margin: 7rem;
+}
+
+.menuContainer h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+.menuContainer .cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.menuContainer .cardContainer .card {
+  position: relative;
+  width: 20rem;
+  margin-bottom: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.menuContainer .cardContainer .card img {
+  height: 15rem;
+  border-radius: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.menuContainer .cardContainer .card button, .menuContainer .cardContainer .card .activeButton {
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(124, 124, 124, 0.9);
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  bottom: 29%;
+  transform: translateX(-50%);
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.menuContainer .cardContainer .card button:hover, .menuContainer .cardContainer .card .activeButton:hover {
+  cursor: pointer;
+  outline: 2px solid hsl(14, 86%, 42%);
+  color: hsl(14, 86%, 42%);
+}
+.menuContainer .cardContainer .card button span, .menuContainer .cardContainer .card .activeButton span {
+  color: hsl(14, 86%, 42%);
+}
+.menuContainer .cardContainer .card .activeButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(14, 86%, 42%);
+}
+.menuContainer .cardContainer .card .activeButton p {
+  color: white;
+  font-weight: 500;
+}
+.menuContainer .cardContainer .card .activeButton p:nth-child(2) {
+  padding: 0 2rem;
+}
+.menuContainer .cardContainer .card p {
+  color: hsl(14, 25%, 72%);
+}
+.menuContainer .cardContainer .card h3 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+.menuContainer .cardContainer .card h3:last-child {
+  color: hsl(14, 86%, 42%);
+}
+
+.cartContainer {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.cartContainer .emptyCartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.cartContainer .orderContainer {
+  position: relative;
+}
+.cartContainer h1:first-child {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+.cartContainer h3 {
+  margin: 2rem 0 1rem 0;
+  font-weight: 650;
+}
+.cartContainer section {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.cartContainer section p:nth-child(2) {
+  margin: 0 1rem 0 2rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+.cartContainer section p:nth-child(3) {
+  color: rgba(173, 137, 133, 0.8);
+}
+.cartContainer hr {
+  border-color: rgba(124, 124, 124, 0.2);
+}
+.cartContainer h1, .cartContainer .quanity {
+  color: hsl(14, 86%, 42%);
+}
+.cartContainer span {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  color: rgba(124, 124, 124, 0.4);
+}
+.cartContainer span:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+.cartContainer .totalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+.cartContainer .totalContainer h3 {
+  font-weight: 500;
+}
+.cartContainer .totalContainer h1 {
+  color: black;
+  font-size: 1.8rem;
+}
+.cartContainer .infoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background-color: hsl(20, 50%, 98%);
+}
+.cartContainer .infoContainer p {
+  font-weight: 500;
+}
+.cartContainer .infoContainer p:first-child {
+  color: hsl(159, 69%, 38%);
+}
+
+.confirmContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.confirmContainer main {
+  background-color: white;
+  padding: 2rem;
+  width: 35rem;
+  border-radius: 1rem;
+}
+.confirmContainer main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.confirmContainer main h4 {
+  color: rgba(173, 137, 133, 0.8);
+  font-weight: 500;
+}
+.confirmContainer main section {
+  margin: 2rem 0 1rem 0;
+  background-color: hsl(20, 50%, 98%);
+  padding: 1rem;
+  display: block;
+}
+.confirmContainer main section article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.confirmContainer main section article img {
+  height: 4rem;
+}
+.confirmContainer main section article div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.confirmContainer main section article div .flexBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.confirmContainer main section article div .flexBox p:first-child {
+  color: hsl(14, 86%, 42%);
+}
+.confirmContainer main section .totalContainer {
+  padding-bottom: 0;
+}/*# sourceMappingURL=style.css.map */
