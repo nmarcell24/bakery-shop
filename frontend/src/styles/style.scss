@@ -8,7 +8,7 @@
   font-style: normal;
 }
 
-$primary: hsl(14, 86%, 42%);
+$primary: rgb(199, 58, 15);
 $bg-color: hsl(20, 50%, 98%);
 $gray: rgba(124, 124, 124, 0.4);
 
@@ -41,6 +41,7 @@ html {
 }
 
 .menuContainer {
+
   h1 {
     font-size: 2.6rem;
     margin-bottom: 1.5rem;

@@ -19,7 +19,7 @@ export function Cart() {
           <p>Your added items will appear here</p>
         </div>
       ) : (
-        <>
+        <div className="orderedDessertsContainer">
           {cart.map((order) => (
             <Order key={order._id} {...order} />
           ))}
@@ -48,7 +48,7 @@ export function Cart() {
           >
             Confirm Order
           </button>
-        </>
+        </div>
       )}
       {isShown && <Confirm setIsShown={setIsShown} />}
     </div>

@@ -18,6 +18,10 @@ export function Card({
   const clickedDessert = cart.find((item) => item._id == _id);
   const itemQuantity = clickedDessert ? clickedDessert.quantity : 0;
 
+  const imageStyle: React.CSSProperties = {
+    outline: "5px solid rgb(199, 58, 15)",
+  };
+
   const handleDecrement = () => {
     let updatedCart: Dessert[] = []
     if(clickedDessert?.quantity === 1){
@@ -52,7 +56,7 @@ export function Card({
 
   return (
     <div className="card" id={_id}>
-      <img src={image.desktop} alt={category} />
+      <img src={image.desktop} alt={category} style={itemQuantity > 0 ? imageStyle : undefined} />
       {itemQuantity > 0 ? (
         <div className="quantityContainer">
           <span className="material-symbols-outlined" onClick={handleDecrement}>

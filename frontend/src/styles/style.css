@@ -9,7 +9,7 @@
 }
 
 .bigButton {
-  background-color: hsl(14, 86%, 42%);
+  background-color: rgb(199, 58, 15);
   border: none;
   padding: 1rem 3rem;
   width: 100%;
@@ -80,18 +80,18 @@ html {
 .menuContainer .cardContainer .card button:hover,
 .menuContainer .cardContainer .card .activeButton:hover {
   cursor: pointer;
-  outline: 2px solid hsl(14, 86%, 42%);
-  color: hsl(14, 86%, 42%);
+  outline: 2px solid rgb(199, 58, 15);
+  color: rgb(199, 58, 15);
 }
 .menuContainer .cardContainer .card button span,
 .menuContainer .cardContainer .card .activeButton span {
-  color: hsl(14, 86%, 42%);
+  color: rgb(199, 58, 15);
 }
 .menuContainer .cardContainer .card .activeButton {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: hsl(14, 86%, 42%);
+  background-color: rgb(199, 58, 15);
 }
 .menuContainer .cardContainer .card .activeButton p {
   color: white;
@@ -108,10 +108,10 @@ html {
   margin-top: 0.5rem;
 }
 .menuContainer .cardContainer .card h3:last-child {
-  color: hsl(14, 86%, 42%);
+  color: rgb(199, 58, 15);
 }
 .menuContainer .cardContainer .card .quantityContainer {
-  background-color: hsl(14, 86%, 42%);
+  background-color: rgb(199, 58, 15);
   color: white;
   padding: 0.8rem 1.5rem;
   box-shadow: 0px 0px 10px 0px rgba(124, 124, 124, 0.9);
@@ -178,7 +178,7 @@ html {
 }
 .cartContainer h1,
 .cartContainer .quanity {
-  color: hsl(14, 86%, 42%);
+  color: rgb(199, 58, 15);
 }
 .cartContainer span {
   position: absolute;
@@ -278,7 +278,7 @@ html {
   margin-top: 1rem;
 }
 .confirmContainer main section article div .flexBox p:first-child {
-  color: hsl(14, 86%, 42%);
+  color: rgb(199, 58, 15);
 }
 .confirmContainer main .totalContainer {
   background-color: hsl(20, 50%, 98%);
