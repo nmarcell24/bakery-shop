@@ -1,8 +1,7 @@
+# 🏪 Bakery Store
 
 ![Landing page image](frontend/public/design/desktop-design-selected.jpg)
-
-# 🏪 Bakery Store Backend
-
+##
 A backend API for managing a bakery store, built with **TypeScript**, **Node.js**, **Express**, and **MongoDB**. This application allows users to view available desserts.
 
 ## 🚀 Features
