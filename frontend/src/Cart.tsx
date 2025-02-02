@@ -7,9 +7,11 @@ export function Cart() {
   const { cart } = useCartContext();
   const [isShown, setIsShown] = useState(false);
 
+
+
   return (
     <div className="cartContainer">
-      <h1>Your Cart 0</h1>
+      <h1>Your Cart {cart.reduce((total, num) => total + num.quantity, 0)}</h1>
       {cart.length === 0 ? (
         <div className="emptyCartContainer">
           <img

@@ -32,7 +32,7 @@ html {
 .appContainer {
   display: flex;
   gap: 2rem;
-  margin: 7rem;
+  padding: 7rem;
 }
 
 .menuContainer h1 {
@@ -141,6 +141,8 @@ html {
   background-color: white;
   padding: 1.5rem 2rem;
   width: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -283,4 +285,37 @@ html {
 .confirmContainer main .totalContainer {
   background-color: hsl(20, 50%, 98%);
   padding: 0 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .appContainer {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .cardContainer {
+    place-items: center;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .appContainer {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .cardContainer {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .appContainer {
+    padding: 1rem;
+  }
+  .confirmContainer {
+    font-size: 70%;
+  }
+  .confirmContainer main {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

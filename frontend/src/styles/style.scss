@@ -37,11 +37,10 @@ html {
 .appContainer {
   display: flex;
   gap: 2rem;
-  margin: 7rem;
+  padding: 7rem;
 }
 
 .menuContainer {
-
   h1 {
     font-size: 2.6rem;
     margin-bottom: 1.5rem;
@@ -159,6 +158,7 @@ html {
   background-color: white;
   padding: 1.5rem 2rem;
   width: 100%;
+  min-width: fit-content;
   height: fit-content;
 
   .emptyCartContainer {
@@ -331,6 +331,41 @@ html {
     .totalContainer {
       background-color: $bg-color;
       padding: 0 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .appContainer {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .cardContainer {
+    place-items: center;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .appContainer {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .cardContainer {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .appContainer {
+    padding: 1rem;
+  }
+
+  .confirmContainer {
+    font-size: 70%;
+
+    main {
+      width: 90%; 
     }
   }
 }

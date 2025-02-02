@@ -23,21 +23,16 @@ export function Card({
   };
 
   const handleDecrement = () => {
-    let updatedCart: Dessert[] = []
-    if(clickedDessert?.quantity === 1){
-        updatedCart = cart.filter(dessert => {
-            if(dessert._id !== clickedDessert._id){
-                dessert.quantity = 0
-                return dessert;
-            }
-        })
+    let updatedCart: Dessert[] = [];
+    if (clickedDessert?.quantity === 1) {
+      updatedCart = cart.filter((dessert) => dessert._id !== _id);
     } else {
-        updatedCart = cart.map((dessert) => {
-          if (dessert._id === clickedDessert?._id) {
-            dessert.quantity--;
-          }
-          return dessert;
-        });
+      updatedCart = cart.map((dessert) => {
+        if (dessert._id === clickedDessert?._id) {
+          dessert.quantity--;
+        }
+        return dessert;
+      });
     }
 
     setCart(updatedCart);
@@ -56,17 +51,18 @@ export function Card({
 
   return (
     <div className="card" id={_id}>
-      <img src={image.desktop} alt={category} style={itemQuantity > 0 ? imageStyle : undefined} />
+      <img
+        src={image.desktop}
+        alt={category}
+        style={itemQuantity > 0 ? imageStyle : undefined}
+      />
       {itemQuantity > 0 ? (
         <div className="quantityContainer">
           <span className="material-symbols-outlined" onClick={handleDecrement}>
             remove
           </span>
           {itemQuantity}
-          <span
-            className="material-symbols-outlined"
-            onClick={handleIncrement}
-          >
+          <span className="material-symbols-outlined" onClick={handleIncrement}>
             add
           </span>
         </div>
