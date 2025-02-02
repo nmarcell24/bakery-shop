@@ -6,6 +6,10 @@ A backend API for managing a bakery store, built with **TypeScript**, **Node.js*
 
 - 🍰 Retrieve a list of all available desserts
 - 🔄 Data persistence with MongoDB
+  
+##Experimental feature:
+- 📉 Decrease dessert quantity when an item is sold
+- 📈 Increase dessert quantity when stock is replenished
 
 ## 🛠️ Tech Stack
 
