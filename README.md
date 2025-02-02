@@ -46,9 +46,12 @@ A backend API for managing a bakery store, built with **TypeScript**, **Node.js*
 
 ## 🔧 API Endpoints
 
-| Method | Endpoint             | Description                    |
-|--------|----------------------|---------------------------------|
-| GET    | `/desserts`         | Get all desserts                 |
+| Method | Endpoint                   | Description                     |
+|--------|----------------------------|---------------------------------|
+| GET    | `/desserts`                | Get all desserts                |
+|--------|---Experimental Endpoints---|---------------------------------|
+| PUT    | `/desserts/:id/increment`  | Increase dessert quantity       |
+| PUT    | `/desserts/:id/decrement`  | Decrease dessert quantity       |
 
 ## 🙌 Contributing
 
